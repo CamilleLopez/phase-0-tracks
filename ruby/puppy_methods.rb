@@ -7,3 +7,4 @@ class Puppy
 
 end
 
+ben = Puppy.new
