@@ -1,0 +1,32 @@
+header {
+        font-family:Arial;
+        background-color:pink;
+        margin: 3px;
+        padding: 3px;
+        border:solid 1px black;
+  }
+  h2{
+    font-family:cursive;
+  }
+  
+ .column-1 {
+   display:inline-block;
+   width:45%;
+   padding: 10px;
+   margin-right: 5px;
+   
+ } 
+  .column-2 {
+   display:inline-block;
+   vertical-align: top;
+   width: 45%;
+   padding: 10px;
+ } 
+ footer{
+   font-family:Arial;
+   background-color:pink;
+   margin-top:5px;
+   text-align:center;
+   border:solid 1px black;
+ }
+ 
