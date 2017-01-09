@@ -1,0 +1,33 @@
+#steps to operate an elevator
+
+#Main task is get elevator to go up to the correct floor and then exit onto that floor
+
+  #Mini task
+    #Enter correct elevator
+      # Check for open elevators going same direction you need to go either up or down
+      # If an elevator door is open going the directon you need, step into that elevator
+      # Wait for elevator door to close ( will typically happen automatically)
+
+    # Guide elevator to correct floor
+      # Press number corresponding to floor you need to reach , so if you need to get to floor 4 press the button that says "4"
+
+    #Determine when to exit elevator
+      #When the elevator door opens and at the same time the floor light corresponding to your goal floor lights up, then you should step out
+
+    # Stepping out of elevator
+      #step out by walking towards open door , if door starts shutting while you are passing through , just hold your hand out to it as if your making a stop gesture, it will hold the door from shutting, keep walking out until your body is fully out. 
+
+
+#Algorith for Enjoying a can of Coke
+  -Obtain a can of coke
+  - Hold can , if can is cold ..
+     1- open can by pulling up on top tab
+     2- wait 5 seconds
+     3 bring can up to mouth 
+     4 tilt can up and take 2 -3 gulps
+  -Otherwise, if can is not cold
+     - put can in refrigerator for 1 hour
+     - after 1 hour , take can out 
+     - do above steps 1-4
+
+     
