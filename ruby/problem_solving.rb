@@ -34,4 +34,16 @@ def fib(n)
 end 
  #p fibarray[-1]+fibarray[-2]
 p fib(100)
-#[0,1,1,2,3,5]
+
+#release 2 pseudocode
+# define insertion. It will have one argument
+# outside loop will be for sorted list. sorted list already is at 0 so we will begin at one. loop for variable in 1 will the length -1. Or else we will go a space extra
+  # name a variable that will have that given number's index . so num[i]
+  
+  # now while a variable is >= 0 and the num[variable] > key
+    # we will want to shift that number.
+    # variable = variable - 1
+    
+  # close the while loop
+  # and update number
+  
