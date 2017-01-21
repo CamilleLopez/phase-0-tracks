@@ -15,16 +15,26 @@ class Santa
     puts "that was a good #{cookie} cookie"
   end 
   
+  #getter methods 
+  def age
+  	@age
+  end 
+
+  def ethnicity 
+  	@ethnicity 
+  end 
+
  
 
 
 
 
 end 
-#randy = Santa.new
+randy = Santa.new("black","multi")
 #randy.speak
 #randy.eat_milk_and_cookies("sugar")
-
+puts "Randy is #{randy.age}"
+puts "Randy is #{randy.ethnicity}"
 =begin
 testing attributes
 santas = []
@@ -37,13 +47,14 @@ santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 santas << Santa.new("N/A", "N/A")
 
 =end
+=begin
 santas = []
 gender_option = ["female", "other", "fluid"]
 ethnicities = ["black", "blue", "green", "yellow", "orange", "brown"]
 gender_option.length.times do |i|
 	santas << Santa.new(gender_option[i], ethnicities[i])
 end 
-
+=end 
 
 
 
