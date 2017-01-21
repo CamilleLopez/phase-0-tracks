@@ -24,8 +24,27 @@ class Santa
   	@ethnicity 
   end 
 
- 
+def ranking
+	@ranking
+end 
 
+def gender
+	@gender
+end 
+  #setter methods
+
+ def celebrate_birthday 
+   @age +1
+end 
+ 
+ def get_mad_at=(name)
+ @ranking.delete(name)
+ @ranking << name
+end 
+
+def newgender=(newgender)
+	@gender = newgender
+end 
 
 
 
@@ -35,6 +54,12 @@ randy = Santa.new("black","multi")
 #randy.eat_milk_and_cookies("sugar")
 puts "Randy is #{randy.age}"
 puts "Randy is #{randy.ethnicity}"
+
+puts "Randy is now #{randy.celebrate_birthday}"
+randy.get_mad_at=("Rudolph")
+p randy.ranking
+randy.newgender = "Trigender"
+puts "Randy is now #{randy.gender}"
 =begin
 testing attributes
 santas = []
