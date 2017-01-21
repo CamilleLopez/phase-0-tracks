@@ -35,4 +35,15 @@ santas << Santa.new("male", "Japanese")
 santas << Santa.new("female", "prefer not to say")
 santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 santas << Santa.new("N/A", "N/A")
-=end 
+
+=end
+santas = []
+gender_option = ["female", "other", "fluid"]
+ethnicities = ["black", "blue", "green", "yellow", "orange", "brown"]
+gender_option.length.times do |i|
+	santas << Santa.new(gender_option[i], ethnicities[i])
+end 
+
+
+
+
