@@ -1,4 +1,10 @@
 class Santa
+#readable
+ attr_reader :age ,:ethnicity
+ #readable and writeable
+ attr_accessor :gender ,:ranking 
+
+
   def initialize(gender,ethnicity)
   puts "initializing Santa instance"
   @gender = gender
@@ -14,7 +20,7 @@ class Santa
   def eat_milk_and_cookies(cookie)
     puts "that was a good #{cookie} cookie"
   end 
-  
+=begin
   #getter methods 
   def age
   	@age
@@ -45,8 +51,15 @@ end
 def newgender=(newgender)
 	@gender = newgender
 end 
+=end
+ def celebrate_birthday 
+   @age +1
+end 
 
-
+def get_mad_at=(name)
+ @ranking.delete(name)
+ @ranking << name
+end 
 
 end 
 randy = Santa.new("black","multi")
@@ -55,10 +68,12 @@ randy = Santa.new("black","multi")
 puts "Randy is #{randy.age}"
 puts "Randy is #{randy.ethnicity}"
 
-puts "Randy is now #{randy.celebrate_birthday}"
+
+
+#puts "Randy is now #{randy.celebrate_birthday}"
 randy.get_mad_at=("Rudolph")
 p randy.ranking
-randy.newgender = "Trigender"
+randy.gender = "Trigender"
 puts "Randy is now #{randy.gender}"
 =begin
 testing attributes
