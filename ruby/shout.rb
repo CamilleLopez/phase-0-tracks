@@ -1,16 +1,38 @@
 module Shout
 
-def self.yell_angrily(words)
+  def yell_angrily(words)
     words + "!!!" + " :("
   end
-
-def self.cry(words)
+  def cry(words)
 	words + "boohoo"
   end 
 
 
+ end 
 
+
+class Baby
+include Shout
 end 
 
-puts Shout.yell_angrily("hi")
-puts Shout.cry("no")
+
+class Teacher
+include Shout
+end 
+
+
+
+cindy = Baby.new
+puts cindy.yell_angrily("why")
+puts cindy.cry("no")
+
+vador = Teacher.new
+puts vador.yell_angrily("roar")
+puts vador.cry("no")
+
+
+
+
+
+#puts Shout.yell_angrily("hi")
+#puts Shout.cry("no")
