@@ -1,8 +1,5 @@
 
-
-
-
-
+require_relative "list"
 
 
 
