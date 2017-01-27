@@ -1,3 +1,6 @@
+
+
+
 def vowel_switch(input)
 
 new_start= input.downcase
@@ -43,5 +46,72 @@ end
 
 
 end
-p vowel_switch("Felicia Torres")
+puts "Enter name"
+name=gets.chomp
+datastore= []
+datastore<<vowel_switch(name)
+p datastore
+
+puts "enter another name or enter done"
+name = gets.chomp
+
+#i = 0
+while name != "done"
+   datastore<<vowel_switch(name)
+   #p datastore
+   break if name == "done"
+   name = gets.chomp
+end
+
+p datastore
+
+#if name == "done"
+ # p datastore
+  #end
  
+#else 
+=begin
+if name == "done"
+  answer = "false"
+  else 
+    answer = "true"
+end 
+answer = "true"
+until answer == "false"
+puts "enter another name or done"
+name=gets.chomp
+datastore<<vowel_switch(name)
+
+
+=begin
+while name != "done"
+  puts "enter a name or press done"
+  name = gets.chomp
+  #name = gets.chomp
+  puts "enter a name or press done"
+  name = gets.chomp
+  if name != "done"
+  datastore<<vowel_switch(name)
+  #if name == "done"
+  
+  #else datastore<<vowel_switch(name)
+  #p datastore
+  break if name == "done"
+end 
+
+
+
+
+
+#puts "enter another name or enter done"
+#name=gets.chomp
+#while name != "done"
+ # name=gets.chomp
+  #datastore= []
+  #datastore<<vowel_switch(name)
+
+  #datastore<<vowel_switch(name)
+  #break if name == "done"
+=end
+
+
