@@ -5,7 +5,8 @@
 
 # EXPLANATION OF require_relative
 #
-#
+#require_relative: refers to another file in same directory
+#require: doesn't have to be in same directory
 require_relative 'state_data'
 
 class VirusPredictor
