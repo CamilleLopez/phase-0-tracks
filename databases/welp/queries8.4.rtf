@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf130
+{\fonttbl\f0\fnil\fcharset0 AndaleMono;}
+{\colortbl;\red255\green255\blue255;\red180\green36\blue25;\red47\green255\blue18;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \cb0 \CocoaLigature0 welp\cf3  (master *) :> sqlite3 welp.db\
+SQLite version 3.8.10.2 2015-05-20 18:17:19\
+Enter ".help" for usage hints.\
+sqlite> .tables\
+businesses  reviews     some_users  users     \
+sqlite> SELECT * FROM businesses NATURAL JOIN some_users, reviews;\
+1|Mcdonalds|Bob|Smith|1|4|Great Service|1|2\
+1|Mcdonalds|Bob|Smith|2|3|Terrible Services|2|2\
+1|Mcdonalds|Bob|Smith|3|4|Great Burgers|4|1\
+1|Mcdonalds|Bob|Smith|4|4|Really great pad thai|4|3\
+2|Bob's_Burger|Suzy|Q|1|4|Great Service|1|2\
+2|Bob's_Burger|Suzy|Q|2|3|Terrible Services|2|2\
+2|Bob's_Burger|Suzy|Q|3|4|Great Burgers|4|1\
+2|Bob's_Burger|Suzy|Q|4|4|Really great pad thai|4|3\
+3|Pizza_Huts|Mickeyb|Mouse|1|4|Great Service|1|2\
+3|Pizza_Huts|Mickeyb|Mouse|2|3|Terrible Services|2|2\
+3|Pizza_Huts|Mickeyb|Mouse|3|4|Great Burgers|4|1\
+3|Pizza_Huts|Mickeyb|Mouse|4|4|Really great pad thai|4|3\
+4|Thai_Diner|Miniie|Mouse|1|4|Great Service|1|2\
+4|Thai_Diner|Miniie|Mouse|2|3|Terrible Services|2|2\
+4|Thai_Diner|Miniie|Mouse|3|4|Great Burgers|4|1\
+4|Thai_Diner|Miniie|Mouse|4|4|Really great pad thai|4|3\
+sqlite> SELECT some_users.name, businesses.name, reviews.stars, reviews,comments FROM businesses NATURAL JOIN some_users,reviews;\
+Error: no such column: some_users.name\
+sqlite> SELECT some_users.first_name,e businesses,name, reviews.stars, reviews.comments FROM businesses NATURAL JOIN some_users,reviews;\
+Error: no such column: e\
+sqlite> SELECT some_users.first_.name, businesses.name, reviews.stars, reviews,comments FROM businesses NATURAL JOIN some_users,reviews;\
+Error: no such column: some_users.first_.name\
+sqlite> SELECT some_users.first_name, businesses.name, reviews.stars, reviews,comments FROM businesses NATURAL JOIN some_users,reviews;\
+Error: no such column: reviews\
+sqlite> ELECT some_users.first_name, businesses.name, reviews.stars, reviews,comments FROM businesses NATURAL JOIN some_users,reviews;\
+Error: near "ELECT": syntax error\
+sqlite> ELECT some_users.first_name, businesses.name, reviews.stars, reviews,comments FROM businesses NATURAL JOIN some_users,reviews;\
+Error: near "ELECT": syntax error\
+sqlite> SELECT some_users.first_name, businesses.name, reviews.stars, reviews.comments FROM businesses NATURAL JOIN some_users,reviews;\
+Bob|Mcdonalds|4|Great Service\
+Bob|Mcdonalds|3|Terrible Services\
+Bob|Mcdonalds|4|Great Burgers\
+Bob|Mcdonalds|4|Really great pad thai\
+Suzy|Bob's_Burger|4|Great Service\
+Suzy|Bob's_Burger|3|Terrible Services\
+Suzy|Bob's_Burger|4|Great Burgers\
+Suzy|Bob's_Burger|4|Really great pad thai\
+Mickeyb|Pizza_Huts|4|Great Service\
+Mickeyb|Pizza_Huts|3|Terrible Services\
+Mickeyb|Pizza_Huts|4|Great Burgers\
+Mickeyb|Pizza_Huts|4|Really great pad thai\
+Miniie|Thai_Diner|4|Great Service\
+Miniie|Thai_Diner|3|Terrible Services\
+Miniie|Thai_Diner|4|Great Burgers\
+Miniie|Thai_Diner|4|Really great pad thai\
+sqlite> }
