@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Names</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h2>Attendance</h2>
+  <ul>
+    <% @students.each do |names| %>
+      <li><%=  names['name'] %> </li>
+    <% end %>
+  </ul>
+  <script type="text/javascript" src="../scripts.js"></script>
+</body>
+</html>
